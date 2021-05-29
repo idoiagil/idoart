@@ -1,0 +1,12 @@
+administrador (#id, email, contrasena)
+mensajes (#id, fecha, para, de, mensaje, vistaDe, vistaPara, vistoDe, vistoPara) (id_administrador -> de, para)|| (id_usuario -> de, para)
+usuario (#id, nombre, ape1, ape2, nick, email, contrasena, fecha_nacimiento)
+perfil (#id, id_usuario, genero, ciudad, imagen, bio, telefono)
+posts(#id, id_usuario, texto, imagen, fecha)
+obras(#id, id_artista, categoria, subcategoria, artista, sobre, imagen, nombre)
+artistas(#id, nombre, categoría, subcategoria, emergente, imagen, descripcion)
+
+follows (#(id_seguido, id_seguidor), id_seguido, id_seguidor)
+likesObras (#(id_usuario, id_obra), id_usuario, id_obra)
+comentariosObras (#(id_usuario, id_obra), id_usuario, id_obra)
+comentarios(#(id_post, id_usuario), id_usuario, id_post, comentario) 
